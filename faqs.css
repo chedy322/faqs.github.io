@@ -1,0 +1,148 @@
+
+@keyframes animate {
+    0% {
+        left: 400px;
+    }
+    50%{
+        left: 800px;
+    }
+    100% {
+        left:600px;
+    }
+}
+.title{
+    font-size: x-large;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:relative;
+   
+    animation: animate 3s 3 ;
+    animation-direction: alternate;
+    
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+body{
+    height:100%;
+    
+    background: url('https://assets.website-files.com/60d5fccd073e736650e22809/620308fd9ff0a1584cba4afa_User%20Feedback%20Questions.png') no-repeat center/cover;
+    background-attachment:fixed ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+    
+}
+.body{
+    border:solid 2px black;
+    box-shadow: 0 0 3px rgba(183, 183, 183, 0.158);
+    border-radius: 10px;
+    line-height: auto;
+    background-color: rgba(255, 255, 255, 0.252);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.frequent{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    color: rgb(20, 19, 19);
+    margin-bottom: 30px;
+
+
+}
+.qu{
+    padding: 18px 18px;
+    font-size:20px;
+    border-bottom: 1px solid black;
+    position:relative;
+}  
+.qu:hover{
+    cursor:pointer;
+} 
+.qu::after{
+    content:'+';
+    position: absolute;
+    right:-5px;
+    color:black;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.hidden{
+    padding-top:15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    height:0%;
+    overflow:hidden;
+    transition: 0.8s;
+
+}
+.body .first.active .hidden{
+    height:30%;
+    overflow: auto;
+}
+.body .first.active .qu{
+    font-size:18px;
+    transition: 0.8s;
+
+
+}
+.body .first.active .qu::after{
+    content:'-';
+    position: absolute;
+    right:-5px;
+    color:black;
+    font-weight: 700;
+    font-size: x-large;
+    transition: 0.8s;
+
+}
+@media (max-width: 768px) {
+    /* Styles for screens smaller than 768px (typically phones) */
+    @keyframes animate2{
+        0% {
+            left: 0px;
+        }
+        50%{
+            left: 10px;
+        }
+        100% {
+            left:90px;
+        }
+    }
+    .body{
+        border:solid 2px black;
+        box-shadow: 0 0 3px rgba(183, 183, 183, 0.158);
+        border-radius: 10px;
+        line-height: auto;
+        background-color: rgba(255, 255, 255, 0.252);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        width:60%;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    .title{
+        font-size: x-large;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position:relative;
+       
+        animation: animate2 3s 3 ;
+        animation-direction: alternate;
+        
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
